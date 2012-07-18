@@ -3,14 +3,14 @@ package com.android.gotham;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class PhaseBeam extends Activity {
+public class Gotham extends Activity {
 
-    private PhaseBeamView mView;
+    private GothamView mView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mView = new PhaseBeamView(this);
+        mView = new GothamView(this);
         setContentView(mView);
     }
 }

@@ -5,12 +5,12 @@ import android.renderscript.RSSurfaceView;
 import android.renderscript.RenderScriptGL;
 import android.view.SurfaceHolder;
 
-public class PhaseBeamView extends RSSurfaceView {
+public class GothamView extends RSSurfaceView {
 
     private RenderScriptGL mRS;
-    private PhaseBeamRS mRender;
+    private GothamRS mRender;
 
-    public PhaseBeamView(Context context) {
+    public GothamView(Context context) {
         super(context);
         setFocusable(true);
         setFocusableInTouchMode(true);
@@ -24,7 +24,7 @@ public class PhaseBeamView extends RSSurfaceView {
             mRS = createRenderScriptGL(sc);
             mRS.setSurface(holder, w, h);
 
-            mRender = new PhaseBeamRS();
+            mRender = new GothamRS();
             mRender.init(240, mRS, getResources(), w, h);
         }
 

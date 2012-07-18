@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import android.util.Log;
 
-public class PhaseBeamRS {
+public class GothamRS {
     public static String LOG_TAG = "Gotham";
     public static final int DOT_COUNT = 28;
     private Resources mRes;

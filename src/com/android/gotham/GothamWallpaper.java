@@ -10,7 +10,7 @@ import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
 import android.view.WindowManager;
 
-public class PhaseBeamWallpaper extends WallpaperService {
+public class GothamWallpaper extends WallpaperService {
 
     @Override
     public Engine onCreateEngine() {
@@ -19,7 +19,7 @@ public class PhaseBeamWallpaper extends WallpaperService {
 
     private class RenderScriptEngine extends Engine {
         private RenderScriptGL mRenderScript = null;
-        private PhaseBeamRS mWallpaperRS = null;
+        private GothamRS mWallpaperRS = null;
         private int mDensityDPI;
 
         @Override
@@ -59,7 +59,7 @@ public class PhaseBeamWallpaper extends WallpaperService {
             super.onSurfaceCreated(surfaceHolder);
 
             RenderScriptGL.SurfaceConfig sc = new RenderScriptGL.SurfaceConfig();
-            mRenderScript = new RenderScriptGL(PhaseBeamWallpaper.this, sc);
+            mRenderScript = new RenderScriptGL(GothamWallpaper.this, sc);
             mRenderScript.setPriority(RenderScript.Priority.NORMAL);
         }
 
@@ -79,7 +79,7 @@ public class PhaseBeamWallpaper extends WallpaperService {
             }
 
             if (mWallpaperRS == null) {
-                mWallpaperRS = new PhaseBeamRS();
+                mWallpaperRS = new GothamRS();
                 mWallpaperRS.init(mDensityDPI, mRenderScript, getResources(), width, height);
                 mWallpaperRS.start();
             }
